@@ -29,9 +29,9 @@ public class StudentAdapter extends RecyclerView.Adapter<StudentAdapter.students
     @Override
     public void onBindViewHolder(@NonNull studentsView holder, int position) {
 
-        Student cricketer = studentList.get(position);
-        holder.textStudentName.setText(cricketer.getStudentName());
-        holder.textBranchName.setText(cricketer.getBranchName());
+        Student student = studentList.get(position);
+        holder.textStudentName.setText(student.getStudentName());
+        holder.textBranchName.setText(student.getBranchName());
     }
 
     @Override
