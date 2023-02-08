@@ -2,9 +2,9 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="horizontal"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:orientation="horizontal"
     android:paddingTop="11dp"
     android:paddingBottom="8dp">
 
@@ -14,14 +14,14 @@
         android:layout_height="40dp"
         android:layout_marginStart="10dp"
         android:layout_marginEnd="5dp"
-        android:fontFamily="@font/poppins_bold"
-        android:background="@drawable/round_grey"
         android:layout_weight="1"
+        android:background="@drawable/round_grey"
+        android:fontFamily="@font/poppins_bold"
         android:hint="Student's Name"
-        android:textSize="14sp"
-
         android:paddingStart="10dp"
+
         android:textColor="@color/black"
+        android:textSize="14sp"
         tools:ignore="Autofill,HardcodedText,RtlSymmetry,TextFields">
 
     </EditText>
@@ -33,11 +33,11 @@
 
         <androidx.appcompat.widget.AppCompatSpinner
             android:id="@+id/spinner_branch"
-            android:hint="Branch"
-            android:textSize="14sp"
             android:layout_width="150dp"
             android:layout_height="40dp"
             android:fontFamily="@font/poppins_bold"
+            android:hint="Branch"
+            android:textSize="14sp"
             tools:ignore="HardcodedText">
 
         </androidx.appcompat.widget.AppCompatSpinner>
@@ -47,11 +47,11 @@
         android:id="@+id/image_delete"
         android:layout_width="25dp"
         android:layout_height="25dp"
-        app:tint="@color/black"
-        android:layout_marginEnd="10dp"
-        android:layout_marginStart="5dp"
         android:layout_gravity="center_vertical"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="10dp"
         android:src="@drawable/ic_close"
+        app:tint="@color/black"
         tools:ignore="ContentDescription">
 
     </ImageView>

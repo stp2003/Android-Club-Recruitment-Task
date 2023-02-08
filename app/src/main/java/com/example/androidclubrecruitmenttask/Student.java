@@ -1,4 +1,5 @@
 package com.example.androidclubrecruitmenttask;
+
 import java.io.Serializable;
 
 public class Student implements Serializable {
@@ -7,7 +8,6 @@ public class Student implements Serializable {
     public String branchName;
 
     public Student() {
-
     }
 
     public Student(String studentName, String branchName) {

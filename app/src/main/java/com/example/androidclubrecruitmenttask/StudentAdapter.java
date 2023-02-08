@@ -10,42 +10,43 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
-public class StudentAdapter extends RecyclerView.Adapter<StudentAdapter.CricketerView> {
+public class StudentAdapter extends RecyclerView.Adapter<StudentAdapter.studentsView> {
 
-    ArrayList<Student> cricketersList = new ArrayList<>();
+    ArrayList<Student> studentList = new ArrayList<>();
 
-    public StudentAdapter(ArrayList<Student> cricketersList) {
-        this.cricketersList = cricketersList;
+    public StudentAdapter(ArrayList<Student> studentList) {
+        this.studentList = studentList;
     }
 
     @NonNull
     @Override
-    public CricketerView onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public studentsView onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
 
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.row_student, parent, false);
-        return new CricketerView(view);
+        return new studentsView(view);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull CricketerView holder, int position) {
+    public void onBindViewHolder(@NonNull studentsView holder, int position) {
 
-        Student cricketer = cricketersList.get(position);
-        holder.textCricketerName.setText(cricketer.getStudentName());
-        holder.textTeamName.setText(cricketer.getBranchName());
+        Student cricketer = studentList.get(position);
+        holder.textStudentName.setText(cricketer.getStudentName());
+        holder.textBranchName.setText(cricketer.getBranchName());
     }
 
     @Override
     public int getItemCount() {
-        return cricketersList.size();
+        return studentList.size();
     }
 
-    public static class CricketerView extends RecyclerView.ViewHolder {
+    public static class studentsView extends RecyclerView.ViewHolder {
 
-        TextView textCricketerName, textTeamName;
-        public CricketerView(@NonNull View itemView) {
+        TextView textStudentName, textBranchName;
+
+        public studentsView(@NonNull View itemView) {
             super(itemView);
-            textCricketerName = (TextView) itemView.findViewById(R.id.text_student_name);
-            textTeamName = (TextView) itemView.findViewById(R.id.text_branch_name);
+            textStudentName = (TextView) itemView.findViewById(R.id.text_student_name);
+            textBranchName = (TextView) itemView.findViewById(R.id.text_branch_name);
         }
     }
 }
